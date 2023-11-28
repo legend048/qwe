@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>First test</title>
+  </head>
+  <body>
+    fgffhf
+    <form action="download_image" method="post">
+      {% csrf_token %}
+      <input type="text" name="text" placeholder="Enter text" />
+      <button type="submit">Generate Image</button>
+    </form>
+  </body>
+</html>

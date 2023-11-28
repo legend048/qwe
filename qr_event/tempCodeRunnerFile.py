@@ -1,0 +1,1 @@
+print(BASE_DIR)

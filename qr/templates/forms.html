@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>First page test</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/forms.css" />
+  </head>
+  <body>
+
+    <h2>Login</h2>
+    <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a>
+
+    {% comment %} ---------- login box start ---------- {% endcomment %}
+    <div class="login-box">
+      {% comment %} <img src="static/image.png" width="100%" /> {% endcomment %}
+      <h2>Enter your name</h2>
+      <form action="download_image" method="post" id="name_form">
+        {% csrf_token %}
+        <div class="user-box">
+          <input type="text" name="text" placeholder="Enter text" />
+          {% comment %} <label>Username</label> {% endcomment %}
+        </div>
+        {% csrf_token %}
+        <div class="user-box">
+          <input type="text" name="csv_update" placeholder="Enter Roll NO." />
+          {% comment %} <label>Username</label> {% endcomment %}
+        </div>
+        <a href="#" onclick="myFunction()"> Submit </a>
+      </form>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("name_form").submit();
+      }
+    </script>
+    {% comment %} ---------- login box end ---------- {% endcomment %}
+  </body>
+</html>
