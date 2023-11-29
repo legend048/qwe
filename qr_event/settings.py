@@ -78,14 +78,11 @@ WSGI_APPLICATION = "qr_event.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '3e22-G*a-aEdBgdB2B*CFFcF-*AcD1AG',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '59832',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
